@@ -1,4 +1,4 @@
-package dev.ctsetera.sample01
+package dev.ctsetera.sample01.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -26,13 +26,33 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this)[MainViewModel::class.java]
+        viewModel = ViewModelProvider(this, MainViewModel.Factory)[MainViewModel::class.java]
 
-        val showLogButton = binding.buttonShowLog
+        val button1 = binding.button1
+        val button2 = binding.button2
+        val button3 = binding.button3
+        val buttonShowLog = binding.buttonShowLog
+        val buttonDeleteLog = binding.buttonDeleteLog
 
-        showLogButton.setOnClickListener {
+        button1.setOnClickListener {
+            viewModel.addLog("Interaction with 'Button 1'")
+        }
+
+        button2.setOnClickListener {
+            viewModel.addLog("Interaction with 'Button 2'")
+        }
+
+        button3.setOnClickListener {
+            viewModel.addLog("Interaction with 'Button 3'")
+        }
+
+        buttonShowLog.setOnClickListener {
             requireView().findNavController()
                 .navigate(MainFragmentDirections.actionMainFragmentToLogFragment())
+        }
+
+        buttonDeleteLog.setOnClickListener {
+            viewModel.deleteLogs()
         }
     }
 }

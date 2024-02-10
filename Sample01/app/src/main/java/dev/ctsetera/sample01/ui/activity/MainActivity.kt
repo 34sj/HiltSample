@@ -1,7 +1,10 @@
-package dev.ctsetera.sample01
+package dev.ctsetera.sample01.ui.activity
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import dev.ctsetera.sample01.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -14,6 +17,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val toolbar = binding.toolbar
-        setSupportActionBar(toolbar)
+        val navHostFragment = binding.myNavHostFragment
+
+        val navController = supportFragmentManager.findFragmentById(navHostFragment.id) as Fragment
+        toolbar.setupWithNavController(navController.findNavController())
     }
 }
