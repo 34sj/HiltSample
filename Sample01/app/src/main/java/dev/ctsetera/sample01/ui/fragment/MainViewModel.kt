@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.APPLICATION_KEY
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
-import dev.ctsetera.sample01.LogApplication
+import dev.ctsetera.sample01.application.LogApplication
 import dev.ctsetera.sample01.repository.LogRepository
 
 class MainViewModel(private val logRepository: LogRepository) : ViewModel() {

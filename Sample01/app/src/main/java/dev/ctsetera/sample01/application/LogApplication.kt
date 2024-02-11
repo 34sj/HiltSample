@@ -1,4 +1,4 @@
-package dev.ctsetera.sample01
+package dev.ctsetera.sample01.application
 
 import android.app.Application
 

@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.initializer
 import androidx.lifecycle.viewmodel.viewModelFactory
-import dev.ctsetera.sample01.LogApplication
+import dev.ctsetera.sample01.application.LogApplication
 import dev.ctsetera.sample01.model.Log
 import dev.ctsetera.sample01.repository.LogRepository
 import dev.ctsetera.sample01.util.DateFormatter

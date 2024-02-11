@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package dev.ctsetera.sample01
+package dev.ctsetera.sample01.application
 
 import android.content.Context
 import androidx.room.Room
