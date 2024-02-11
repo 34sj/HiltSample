@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Sample02</string>
+    <string name="ui_button_1">Button 1</string>
+    <string name="ui_button_2">Button 2</string>
+    <string name="ui_button_3">Button 3</string>
+    <string name="ui_show_log">Show Log</string>
+    <string name="ui_delete_log">Delete Log</string>
+    <string name="ui_back">Back</string>
+</resources>
