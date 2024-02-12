@@ -1,6 +1,5 @@
 package dev.ctsetera.sample01.ui.fragment
 
-import android.R
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -33,7 +32,7 @@ class LogFragment : Fragment() {
         viewModel.logList.observe(viewLifecycleOwner) { logList ->
             listView.adapter = ArrayAdapter(
                 requireContext(),
-                R.layout.simple_list_item_1,
+                android.R.layout.simple_list_item_1,
                 logList
             )
         }
