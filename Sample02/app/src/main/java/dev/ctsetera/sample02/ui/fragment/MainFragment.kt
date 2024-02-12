@@ -5,15 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import dagger.hilt.android.AndroidEntryPoint
 import dev.ctsetera.sample02.databinding.FragmentMainBinding
-
+@AndroidEntryPoint
 class MainFragment : Fragment() {
 
     private lateinit var binding: FragmentMainBinding
 
-    private lateinit var viewModel: MainViewModel
+    private val viewModel: MainViewModel  by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,7 +28,6 @@ class MainFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this, MainViewModel.Factory)[MainViewModel::class.java]
 
         val button1 = binding.button1
         val button2 = binding.button2
